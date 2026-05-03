@@ -1,4 +1,4 @@
-![Kundli API](banner.png)
+[![Kundli API](banner.png)](https://roxyapi.com/products/vedic-astrology-api)
 
 # Kundli API
 
