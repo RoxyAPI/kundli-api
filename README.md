@@ -12,13 +12,13 @@
 
 ## What is Kundli API
 
-The Kundli API calculates a complete Vedic birth chart (Janam Kundli) for any birth date, time, and location. It returns all 9 planetary positions (Navagraha) plus Ascendant (Lagna), grouped by zodiac sign (rashi), with nakshatra and pada details. The kundli calculator also flags combustion using Surya Siddhanta orbs, detects planetary war, and returns all 12 house (bhava) interpretations. Roxy Ephemeris, verified against NASA JPL Horizons. Built for kundli generation, horoscope matching, matrimonial sites, and Vedic astrology software. 10 spiritual domains in one subscription, Remote MCP server included.
+The Kundli API calculates a complete Vedic birth chart (Janam Kundli) for any birth date, time, and location. It returns all 9 planetary positions (Navagraha) plus Ascendant (Lagna), grouped by zodiac sign (rashi), with nakshatra and pada details. The kundli calculator also flags combustion using Surya Siddhanta orbs, detects planetary war, and returns all 12 house (bhava) interpretations. Roxy Ephemeris, verified against NASA JPL Horizons. Built for kundli generation, horoscope matching, matrimonial sites, and Vedic astrology software. 12 spiritual domains in one subscription, Remote MCP server included.
 
 ## Why this API
 
 | Property | Value |
 |----------|-------|
-| Coverage | 10 spiritual domains in one subscription |
+| Coverage | 12 spiritual domains in one subscription |
 | Calculation | Roxy Ephemeris, verified against NASA JPL Horizons |
 | MCP server | `https://roxyapi.com/mcp/vedic-astrology` (Streamable HTTP, no local setup) |
 | SDKs | TypeScript on npm `@roxyapi/sdk`, Python on PyPI `roxy-sdk` |
