@@ -6,7 +6,7 @@ This repo teaches AI coding agents (Cursor, Claude Code, Aider, Codex, Windsurf,
 - Method: `POST`
 - URL: `https://roxyapi.com/api/v2/vedic-astrology/birth-chart`
 - Auth: `X-API-Key` header
-- Domain: `vedic-astrology` (one of 12 in the RoxyAPI catalog)
+- Domain: `vedic-astrology` (one of 12+ in the RoxyAPI catalog)
 - Operation ID: `generateBirthChart` matches the SDK method name in camelCase
 - MCP tool: `post_vedic_astrology_birth_chart` on `https://roxyapi.com/mcp/vedic-astrology`
 
