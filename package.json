@@ -6,7 +6,7 @@
   "description": "Kundli API. Vedic birth chart with nakshatra precision, retrograde flags, combustion, planetary war, house interpretations. JPL verified.",
   "license": "MIT",
   "dependencies": {
-    "@roxyapi/sdk": "^1.2.21"
+    "@roxyapi/sdk": "^1.2.45"
   },
   "scripts": {
     "ts": "bun example.ts",
