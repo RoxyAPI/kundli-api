@@ -42,10 +42,11 @@ Always call `GET /location/search?q={city}` first. Take `latitude`, `longitude`,
 ## Response top level keys
 - `aries` ... `pisces`: One key per zodiac sign. Each has `rashi` (sign name) and `signs[]` (planets in that sign with nakshatra, longitude, isRetrograde).
 - `meta`: Flat planet-keyed lookup for Sun, Moon, Mars, Mercury, Jupiter, Venus, Saturn, Rahu, Ketu, Lagna. Most integrations read `meta` for the primary planet map.
-- `houses`: Array of 12 bhava objects with `number`, `name`, and `description`.
+- `houses`: Array of 12 bhava objects with `number`, `name`, `description` (a reading of that bhava for this chart, from its lord and occupants) and `themes`.
 - `combustion`: Planets within combustion orb of the Sun (Surya Siddhanta orbs). Each entry has `planet`, `distanceFromSun`, `orb`.
 - `planetaryWar`: Pairs of visible planets within 1 degree. Each entry has `planet1`, `planet2`, `distance`, `winner`.
-- `interpretations`: Per-planet `rashi` and `nakshatra` interpretation summaries keyed by planet name.
+- `interpretations`: Per-planet `rashi` and `nakshatra` readings written for this chart, keyed by planet name.
+- `interpretation`: The whole chart read as `summary` and `detailed` (paragraphs separated by a blank line). Pass `?lang=` for any supported language.
 
 ## Domain rules
 - Use `meta[planet]` for a flat planet-to-rashi map. The sign-keyed objects (aries, taurus, etc.) are the house grouping view.

@@ -153,15 +153,22 @@ console.log('Planetary war:', kundli.planetaryWar);
     }
   },
   "houses": [
-    { "number": 1, "name": "Lagna", "description": "The ascendant..." },
-    { "number": 2, "name": "Dhana Bhava", "description": "Wealth house..." }
+    { "number": 1, "name": "Lagna", "description": "Self-assurance draws allies to your aims, with your 1st lord in the 11th, the bhava of gains..." },
+    { "number": 2, "name": "Dhana Bhava", "description": "Family pride, fame and a full purse come with your 2nd lord in the 11th..." }
   ],
   "combustion": [
     { "planet": "Mercury", "distanceFromSun": 1.79, "orb": 14 }
   ],
   "planetaryWar": [],
   "interpretations": {
-    "Sun": { "rashi": "...", "nakshatra": "..." }
+    "Sun": {
+      "rashi": "Bright, articulate and open-handed, your Sun in Gemini makes you the person who reads the manual and then explains it kindly...",
+      "nakshatra": "Rudra, the howler of the storm, presides over Ardra, and you think most clearly when the wind is loudest..."
+    }
+  },
+  "interpretation": {
+    "summary": "Counted fourth and tenth from each other, Leo rising and a Moon in Scorpio turn inner friction into steady output...",
+    "detailed": "Matched in pace and crossed in element, Leo rising and the Moon in Scorpio let you start projects with the poise of a host and live with them with loyal depth..."
   }
 }
 ```
@@ -179,10 +186,11 @@ console.log('Planetary war:', kundli.planetaryWar);
 | `meta[planet].rashi` | string | Zodiac sign (rashi) the planet occupies. One of 12 Vedic rashis from Aries (Mesha) to Pisces (Meena). |
 | `meta[planet].longitude` | number | Sidereal longitude in degrees (0-360) using Lahiri ayanamsa. Used for aspect calculations, divisional chart mapping, and transit analysis. |
 | `meta[planet].nakshatra` | object | Nakshatra (lunar mansion) data. Determines dasha lord and behavioral qualities. |
-| `houses` | array | All 12 bhava (house) interpretations with name and description. |
+| `houses` | array | All 12 bhava (houses), each with `name`, `themes` and a `description` read for this chart from its lord and the grahas it holds. |
 | `combustion` | array | Planets within combustion orbs of the Sun (Surya Siddhanta orbs). Each entry has `planet`, `distanceFromSun`, and `orb`. |
 | `planetaryWar` | array | Pairs of visible planets within 1 degree of each other. Includes `planet1`, `planet2`, `distance`, and `winner` (higher ecliptic latitude). |
-| `interpretations` | object | Per-planet `rashi` and `nakshatra` interpretation summaries, keyed by planet name. |
+| `interpretations` | object | Per-planet `rashi` and `nakshatra` readings written for this chart, keyed by planet name. |
+| `interpretation` | object | The whole chart read in a `summary` and a `detailed` reading of a few paragraphs separated by a blank line. |
 
 ## Common use cases
 
@@ -190,7 +198,7 @@ console.log('Planetary war:', kundli.planetaryWar);
 |----------|---------------|
 | Kundli generation for a birth date and city | Call `/location/search?q={city}` first, take `latitude`, `longitude`, `timezone` from `cities[0]`, POST to `/vedic-astrology/birth-chart` |
 | Matrimonial site profile | Generate both charts, read `meta` for Lagna, Moon sign, and nakshatra. Feed into `/vedic-astrology/compatibility` for Guna Milan score. |
-| Astrology app planet panel | Use `meta` object for a flat planet-to-rashi map. Supplement with `interpretations` for rashi and nakshatra summaries. |
+| Astrology app planet panel | Use `meta` object for a flat planet-to-rashi map. Supplement with `interpretations` for rashi and nakshatra readings and `interpretation` for the whole chart. |
 | Combustion and planetary war display | Read `combustion[]` and `planetaryWar[]` arrays directly from the response. |
 | Vedic astrology software integration | Combine with `/vedic-astrology/dasha/current` for timing and `/vedic-astrology/divisional-chart` for varga charts. |
 
